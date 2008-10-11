@@ -14,7 +14,16 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		mibdir	%{_datadir}/snmp/mibs
 
 %description
-MIBs for Nagios.
+Objects for Nagios(tm) events. There are 2 primary tables reflecting
+the division in Nagios for Host events and Service events.
+
+The event tables are extended by the HostNotifyTable and the
+ServiceNotifyTable to keep track of the notifications based on events.
+
+The tables entries themselves are not accessible but are used for OID
+entries for TRAP/INFORM notifications.
+
+These objects are based on the macros defined in Nagios v2.0
 
 %prep
 %setup -q -c
