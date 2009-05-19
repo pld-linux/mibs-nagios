@@ -1,11 +1,11 @@
 Summary:	MIBs for Nagios
 Name:		net-snmp-mibs-nagios
-Version:	1.0.0
+Version:	1.0.1
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/nagiosplug/nagiosmib-%{version}.tar.gz
-# Source0-md5:	88a74f2bda5440a70a3f8e29b9c82628
+# Source0-md5:	c8ecd90e1bc0ddbce4aaa0b35ee89c24
 URL:		http://sourceforge.net/projects/nagiosplug/
 Requires:	net-snmp-mibs
 BuildArch:	noarch
