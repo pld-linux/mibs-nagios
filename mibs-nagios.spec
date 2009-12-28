@@ -1,17 +1,18 @@
 Summary:	MIBs for Nagios
-Name:		net-snmp-mibs-nagios
+Name:		mibs-nagios
 Version:	1.0.1
-Release:	2
+Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/nagiosplug/nagiosmib-%{version}.tar.gz
 # Source0-md5:	c8ecd90e1bc0ddbce4aaa0b35ee89c24
 URL:		http://sourceforge.net/projects/nagiosplug/
-Requires:	net-snmp-mibs
+Requires:	mibs-dirs
+Obsoletes:	net-snmp-mibs-nagios
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		mibdir	%{_datadir}/snmp/mibs
+%define		mibdir	%{_datadir}/mibs
 
 %description
 Objects for Nagios(tm) events. There are 2 primary tables reflecting
@@ -26,7 +27,7 @@ entries for TRAP/INFORM notifications.
 These objects are based on the macros defined in Nagios v2.0
 
 %prep
-%setup -q -c
+%setup -qc
 
 %install
 rm -rf $RPM_BUILD_ROOT
